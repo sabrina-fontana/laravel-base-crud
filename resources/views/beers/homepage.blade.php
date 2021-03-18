@@ -21,7 +21,7 @@
             <th scope="col">nazione</th>
             <th scope="col">gradi</th>
             <th scope="col">prezzo</th>
-            <th scope="col">immagine</th>
+            <th scope="col" class="img-col">immagine</th>
           </tr>
         </thead>
         <tbody>
@@ -34,8 +34,8 @@
               <td>{{$beer->stile}}</td>
               <td>{{$beer->nazione}}</td>
               <td>{{$beer->gradi}}</td>
-              <td>{{$beer->prezzo}}</td>
-              <td><img src="{{$beer->immagine}}" height="200px"></td>
+              <td>€ {{number_format($beer->prezzo, 2)}}</td>
+              <td><img class="table-img" src="{{$beer->immagine}}"></td>
             </tr>
           @endforeach
         </tbody>

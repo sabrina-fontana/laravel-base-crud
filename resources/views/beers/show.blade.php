@@ -7,8 +7,10 @@
 
     <title></title>
   </head>
-  
-  <body>
 
+  <body>
+    <div>nome: {{$beer->nome}}</div>
+    <div>birrificio: {{$beer->birrificio}}</div>
+    <div>stile: {{$beer->stile}}</div>
   </body>
 </html>
