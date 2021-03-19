@@ -38,6 +38,7 @@ class BeerController extends Controller
      */
     public function store(Request $request)
     {
+        // validazione dati
         $request->validate([
             'nome' => 'required|max:100',
             'birrificio' => 'required|max:100',
@@ -45,11 +46,16 @@ class BeerController extends Controller
             'prezzo' => 'required|numeric',
             ]);
 
+        // In store() vengono passate le coppie name-value inviate dal form tramite la classe Request $request. 
+        //Usiamo il suo metodo all() per ottenere tutte le coppie in un array.
         $data = $request->all();
+        // creo il nuovo oggetto Beer e faccio il fill dell'array inviato dal form (dopo aver creato l'array $fillable nel model Beer)
         $newBeer = new Beer();
         $newBeer->fill($data);
+        // salvo i dati nel db
         $newBeer->save();
 
+        // ritorno la root show mostrando l'ultimo oggetto aggiunto
         $beer = Beer::orderBy('id', 'desc')->first();
         return redirect()->route('beers.show', $beer);
     }
