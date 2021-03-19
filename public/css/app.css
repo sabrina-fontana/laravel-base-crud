@@ -10011,3 +10011,9 @@ h3 {
   display: block;
   margin: 0 auto;
 }
+
+.card img {
+  height: 300px;
+  display: block;
+  margin: 0 auto;
+}

@@ -28,7 +28,7 @@
           @foreach($beers as $beer)
             <tr>
               <td>{{$beer->id}}</td>
-              <td>{{$beer->nome}}</td>
+              <td> <a href="{{route('beers.show', $beer->id)}}">{{$beer->nome}}</a> </td>
               <td>{{$beer->birrificio}}</td>
               <td>{{$beer->colore}}</td>
               <td>{{$beer->stile}}</td>
