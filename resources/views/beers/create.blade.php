@@ -3,6 +3,8 @@
 @section('title', 'form')
 
 @section('content')
+
+    {{-- se la validation nel metodo store fallisce, visualizzo a schermo gli errori --}}
     @if ($errors->any())
         <div class="alert alert-danger">
             <ul>
@@ -13,22 +15,25 @@
         </div>
     @endif
 
- <form method="post" action="{{route('beers.store')}}">
+ <form method="post" action="{{route('beers.store')}}" class="needs-validation" novalidate>
 
     @csrf 
     @method('POST')
 
     <div class="form-group row">
-      <label for="inputEmail3" class="col-sm-1 col-form-label">Nome</label>
+      <label for="" class="col-sm-1 col-form-label">Nome</label>
       <div class="col-sm-6">
-        <input type="text" class="form-control" name="nome" placeholder="Nome">
+        <input type="text" class="form-control" name="nome" placeholder="Nome" required>
+        <div class="invalid-feedback">Inserisci un nome!</div>
       </div>
     </div>
 
     <div class="form-group row">
         <label for="birrificio" class="col-sm-1 col-form-label">Birrificio</label>
         <div class="col-sm-6">
-            <input type="text" class="form-control" name="birrificio" placeholder="Birrificio">
+            <input type="text" class="form-control" name="birrificio" placeholder="Birrificio" required>
+            <div class="invalid-feedback">Inserisci un birrificio!</div>
+
         </div>
     </div>
 
@@ -63,7 +68,8 @@
     <div class="form-group row">
     <label for="prezzo" class="col-sm-1 col-form-label">Prezzo</label>
         <div class="col-sm-6">
-            <input type="text" class="form-control" name="prezzo" placeholder="Prezzo">
+            <input type="text" class="form-control" name="prezzo" placeholder="Prezzo" required>
+            <div class="invalid-feedback">Inserisci un prezzo!</div>
         </div>
     </div>
 
@@ -76,5 +82,26 @@
 
     <input class="btn btn-primary" type="submit" value="Submit">
 </form>
+
+<script>
+    // Example starter JavaScript for disabling form submissions if there are invalid fields
+    (function() {
+      'use strict';
+      window.addEventListener('load', function() {
+        // Fetch all the forms we want to apply custom Bootstrap validation styles to
+        var forms = document.getElementsByClassName('needs-validation');
+        // Loop over them and prevent submission
+        var validation = Array.prototype.filter.call(forms, function(form) {
+          form.addEventListener('submit', function(event) {
+            if (form.checkValidity() === false) {
+              event.preventDefault();
+              event.stopPropagation();
+            }
+            form.classList.add('was-validated');
+          }, false);
+        });
+      }, false);
+    })();
+    </script>
 
 @endsection
