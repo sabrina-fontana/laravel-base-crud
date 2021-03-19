@@ -34,4 +34,6 @@
       @endforeach
     </tbody>
   </table>
+
+  <a href="{{route('beers.create')}}"><button type="button" class="btn btn-primary">Inserisci una nuova birra</button></a>
 @endsection

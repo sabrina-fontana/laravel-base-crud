@@ -7,18 +7,44 @@
 // Bootstrap
 @import '~bootstrap/scss/bootstrap';
 
-.img-col {
-  text-align: center;
+.my-body {
+  background-color: #343a40;
+
+  .my-title {
+    color: #fff;
+    text-align: center;
+    margin: 20px 0;
+  }
+
+  .img-col {
+    text-align: center;
+  }
+  
+  .table-img {
+    height: 150px;
+    display: block;
+    margin: 0 auto;
+  }
+  
+  .card img {
+    height: 300px;
+    display: block;
+    margin: 0 auto;
+  }
+  
+  button {
+    display: block;
+    margin: 20px auto; 
+  }
+
+  .my-form {
+    margin: 20px auto;
+    width: 50%;
+
+    .my-label {
+      color: #fff;
+      text-align: right;
+    }
+  }
 }
 
-.table-img {
-  height: 150px;
-  display: block;
-  margin: 0 auto;
-}
-
-.card img {
-  height: 300px;
-  display: block;
-  margin: 0 auto;
-}

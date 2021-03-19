@@ -10002,18 +10002,36 @@ h3 {
     border-color: #dee2e6;
   }
 }
-.img-col {
+.my-body {
+  background-color: #343a40;
+}
+.my-body .my-title {
+  color: #fff;
+  text-align: center;
+  margin: 20px 0;
+}
+.my-body .img-col {
   text-align: center;
 }
-
-.table-img {
+.my-body .table-img {
   height: 150px;
   display: block;
   margin: 0 auto;
 }
-
-.card img {
+.my-body .card img {
   height: 300px;
   display: block;
   margin: 0 auto;
+}
+.my-body button {
+  display: block;
+  margin: 20px auto;
+}
+.my-body .my-form {
+  margin: 20px auto;
+  width: 50%;
+}
+.my-body .my-form .my-label {
+  color: #fff;
+  text-align: right;
 }

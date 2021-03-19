@@ -9,7 +9,7 @@
     <title>@yield('title')</title>
   </head>
 
-  <body>
+  <body class="my-body">
     
     @yield('content')
 
