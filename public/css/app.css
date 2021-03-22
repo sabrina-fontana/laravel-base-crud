@@ -10016,11 +10016,13 @@ h3 {
 }
 .my-body .container .my-btn {
   display: block;
-  margin: 0 auto;
+  margin: 15px auto;
 }
-.my-body .container .table td i {
-  font-size: 26px;
+.my-body .container .table .icons button {
+  width: 40px;
+  font-size: 16px;
   display: block;
+  margin: 10px 0;
 }
 .my-body .container .table .img-col {
   text-align: center;
@@ -10029,6 +10031,13 @@ h3 {
   height: 150px;
   display: block;
   margin: 0 auto;
+}
+.my-body .container .table .my-modal {
+  color: #000;
+}
+.my-body .container .table .my-modal button {
+  margin-left: 20px;
+  width: auto;
 }
 .my-body .container .show-beer {
   width: 100%;
@@ -10067,7 +10076,7 @@ h3 {
   margin: 20px 0;
 }
 .my-body .container .my-form {
-  margin: 20px auto;
+  margin: 30px auto 0 auto;
   width: 70%;
 }
 .my-body .container .my-form .my-label {

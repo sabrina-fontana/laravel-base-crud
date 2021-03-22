@@ -104,7 +104,7 @@ class BeerController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function destroy(Beer $beer)
-    {
+    {   
         $beer->delete();
         return redirect()->route('beers.index');
     }

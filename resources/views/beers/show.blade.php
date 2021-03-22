@@ -29,6 +29,7 @@
 
   </div>
 
+  <a href="{{route('beers.edit', compact('beer'))}}"><button type="button" class="btn btn-secondary my-btn">Modifica</button></a>
   <a href="{{route('beers.index')}}"><button type="button" class="btn btn-light my-btn">Torna all'elenco</button></a>
 
 @endsection

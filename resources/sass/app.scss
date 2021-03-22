@@ -19,13 +19,15 @@
 
     .my-btn {
       display: block;
-      margin: 0 auto; 
+      margin: 15px auto; 
     }
 
     .table {
-      td i {
-        font-size: 26px;
+      .icons button {
+        width: 40px;
+        font-size: 16px;
         display: block;
+        margin: 10px 0;
       }
 
       .img-col {
@@ -37,6 +39,15 @@
         display: block;
         margin: 0 auto;
       }  
+
+      .my-modal {
+        color: #000;
+
+        button {
+          margin-left: 20px;
+          width: auto;
+        }
+      }
     }
 
     .show-beer {
@@ -84,7 +95,7 @@
     }
             
     .my-form {
-      margin: 20px auto;
+      margin: 30px auto 0 auto;
       width: 70%;
   
       .my-label {
