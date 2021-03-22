@@ -7,44 +7,90 @@
 // Bootstrap
 @import '~bootstrap/scss/bootstrap';
 
+// Fontawesome
+@import '~@fortawesome/fontawesome-free/css/all.min.css';
+
 .my-body {
   background-color: #343a40;
 
-  .my-title {
-    color: #fff;
-    text-align: center;
-    margin: 20px 0;
-  }
-
-  .img-col {
-    text-align: center;
-  }
-  
-  .table-img {
-    height: 150px;
-    display: block;
+  .container {
+    width: 1200px;
     margin: 0 auto;
-  }
-  
-  .card img {
-    height: 300px;
-    display: block;
-    margin: 0 auto;
-  }
-  
-  button {
-    display: block;
-    margin: 20px auto; 
-  }
 
-  .my-form {
-    margin: 20px auto;
-    width: 50%;
+    .my-btn {
+      display: block;
+      margin: 0 auto; 
+    }
 
-    .my-label {
+    .table {
+      td i {
+        font-size: 26px;
+        display: block;
+      }
+
+      .img-col {
+        text-align: center;
+      }
+      
+      .table-img {
+        height: 150px;
+        display: block;
+        margin: 0 auto;
+      }  
+    }
+
+    .show-beer {
+      width: 100%;
       color: #fff;
-      text-align: right;
+      margin: 50px 0;
+      display: flex;
+      justify-content: space-between;
+
+      .chevron {
+        font-size: 36px;
+        display: flex;
+        align-items: center;
+        cursor: pointer;
+      }
+
+      .beer-card {
+        display: flex;
+
+        img {
+          height: 400px;
+        }
+  
+        .beer-desc {
+          padding-left: 80px;
+          font-size: 17px;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+  
+          .beer-title {
+            font-family: 'Abril Fatface', cursive;
+            font-size: 26px;
+            margin-bottom: 20px;
+          }
+        }  
+      }
+
+    }
+
+    .my-title {
+      color: #fff;
+      text-align: center;
+      margin: 20px 0;
+    }
+            
+    .my-form {
+      margin: 20px auto;
+      width: 70%;
+  
+      .my-label {
+        color: #fff;
+        text-align: right;
+      }
     }
   }
 }
-
