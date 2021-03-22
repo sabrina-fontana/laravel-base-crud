@@ -39,12 +39,7 @@ class BeerController extends Controller
     public function store(Request $request)
     {
         // validazione dati
-        $request->validate([
-            'nome' => 'required|max:100',
-            'birrificio' => 'required|max:100',
-            'gradi' => 'numeric',
-            'prezzo' => 'required|numeric|between:0,999.99',
-            ]);
+        $this->validateForm($request);
 
         // In store() vengono passate le coppie name-value inviate dal form tramite la classe Request $request. 
         //Usiamo il suo metodo all() per ottenere tutte le coppie in un array.
@@ -92,6 +87,8 @@ class BeerController extends Controller
      */
     public function update(Request $request, Beer $beer)
     {
+        // validazione dati
+        $this->validateForm($request);
         $data = $request->all();
         $beer->update($data);
         return redirect()->route('beers.index');
@@ -107,5 +104,15 @@ class BeerController extends Controller
     {   
         $beer->delete();
         return redirect()->route('beers.index');
+    }
+    
+    protected function validateForm(Request $request) 
+    {
+        $request->validate([
+            'nome' => 'required|max:100',
+            'birrificio' => 'required|max:100',
+            'gradi' => 'numeric',
+            'prezzo' => 'required|numeric|between:0,999.99'
+        ]);
     }
 }

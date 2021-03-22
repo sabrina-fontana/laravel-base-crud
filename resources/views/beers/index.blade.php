@@ -45,7 +45,7 @@
           </td>
         </tr>
       @endforeach
-      <!-- Modal -->
+      <!-- Modal FUORI DAL CICLO FOR EACH PER PRENDE L'ID CORRETTO!!--> 
       <div class="modal fade my-modal" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog" role="document">
           <div class="modal-content">
